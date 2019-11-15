@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6F592FE-31AB-4098-B623-3FBD116AB158}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OxyplotEx</RootNamespace>
+    <AssemblyName>OxyplotEx</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_X64|AnyCPU'">
+    <OutputPath>bin\Debug_X64\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_X64|x64'">
+    <OutputPath>bin\x64\Debug_X64\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OxyPlot.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GMap\Args.cs" />
+    <Compile Include="GMap\AxisFactory.cs" />
+    <Compile Include="GMap\BoundParameter.cs" />
+    <Compile Include="GMap\eAxisPosition.cs" />
+    <Compile Include="GMap\eLineStyle.cs" />
+    <Compile Include="GMap\FontLabelModel.cs" />
+    <Compile Include="GMap\FontLabelSeries.cs" />
+    <Compile Include="GMap\FontLabelValuePairModel.cs" />
+    <Compile Include="GMap\FontLabelValuePairSeries.cs" />
+    <Compile Include="GMap\IAjustAxis.cs" />
+    <Compile Include="GMap\IAxis.cs" />
+    <Compile Include="GMap\IGetXLabel.cs" />
+    <Compile Include="GMap\IInverseData.cs" />
+    <Compile Include="GMap\ILineStyle.cs" />
+    <Compile Include="GMap\IMap.cs" />
+    <Compile Include="GMap\IMeasureTop.cs" />
+    <Compile Include="GMap\IMouseInputHandler.cs" />
+    <Compile Include="GMap\IPerform.cs" />
+    <Compile Include="GMap\IPriority.cs" />
+    <Compile Include="GMap\ISeries.cs" />
+    <Compile Include="GMap\ISOLineAlgorithem.cs" />
+    <Compile Include="GMap\ISOLineSeries.cs" />
+    <Compile Include="GMap\ITimeXAxis.cs" />
+    <Compile Include="GMap\IToTimeSeriesDataTable.cs" />
+    <Compile Include="GMap\LegendSeries.cs" />
+    <Compile Include="GMap\LineRegionAxis.cs" />
+    <Compile Include="GMap\LineString.cs" />
+    <Compile Include="GMap\LineStringCollection.cs" />
+    <Compile Include="GMap\LineStyle.cs" />
+    <Compile Include="GMap\MapFactory.cs" />
+    <Compile Include="GMap\MapPlotModel.cs" />
+    <Compile Include="GMap\MapView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GMap\MultyAxes.cs" />
+    <Compile Include="GMap\Pan.cs" />
+    <Compile Include="GMap\PointAreaSeries.cs" />
+    <Compile Include="GMap\PointColumnSeries.cs" />
+    <Compile Include="GMap\PointLineSeries.cs" />
+    <Compile Include="GMap\PointModel.cs" />
+    <Compile Include="GMap\Priority.cs" />
+    <Compile Include="GMap\SeriesFactory.cs" />
+    <Compile Include="GMap\SplineHelper.cs" />
+    <Compile Include="GMap\Theme\AxisStyle.cs" />
+    <Compile Include="GMap\Theme\AxisTheme.cs" />
+    <Compile Include="GMap\Theme\ColorStyle.cs" />
+    <Compile Include="GMap\Theme\ColorTheme.cs" />
+    <Compile Include="GMap\Theme\LegendStyle.cs" />
+    <Compile Include="GMap\Theme\LegendTheme.cs" />
+    <Compile Include="GMap\Theme\LineSeriesStyle.cs" />
+    <Compile Include="GMap\Theme\LineSeriesTheme.cs" />
+    <Compile Include="GMap\Theme\LineThemeManager.cs" />
+    <Compile Include="GMap\Theme\StyleBase.cs" />
+    <Compile Include="GMap\Theme\ThemeBase.cs" />
+    <Compile Include="GMap\TimeCategoryAxis.cs" />
+    <Compile Include="GMap\TimeData.cs" />
+    <Compile Include="GMap\TimeDataManager.cs" />
+    <Compile Include="GMap\TimePointModel.cs" />
+    <Compile Include="GMap\TlogpAxis.cs" />
+    <Compile Include="GMap\ValuePairPointLineSeries.cs" />
+    <Compile Include="GMap\ValuePairPointModel.cs" />
+    <Compile Include="GMap\VPointCollection.cs" />
+    <Compile Include="GMap\WindPole.cs" />
+    <Compile Include="Model\AxisManager.cs" />
+    <Compile Include="Model\AxisName.cs" />
+    <Compile Include="Model\AxisRangeManager.cs" />
+    <Compile Include="Model\ColorAllocation.cs" />
+    <Compile Include="Model\CoordinateAxises\IAxisAddSeqData.cs" />
+    <Compile Include="Model\DataSeries\ISeqDataScheduler.cs" />
+    <Compile Include="Model\DataSeries\IXYAxisBinding.cs" />
+    <Compile Include="Model\DataSeries\XYAxisBinding.cs" />
+    <Compile Include="Model\DragStatus.cs" />
+    <Compile Include="Model\ElementAxisBingdingKeyMapping.cs" />
+    <Compile Include="Model\ElementNames.cs" />
+    <Compile Include="Model\ElementRenderTypeMapping.cs" />
+    <Compile Include="Model\ElementsDataCollection.cs" />
+    <Compile Include="Model\Convertor.cs" />
+    <Compile Include="Model\DataSeries\SeqData.cs" />
+    <Compile Include="Model\ElementData.cs" />
+    <Compile Include="Model\CoordinateAxises\CloudAxis.cs" />
+    <Compile Include="Model\ElementConfiguration.cs" />
+    <Compile Include="Model\FeatureText.cs" />
+    <Compile Include="Model\FeatureTextIntersector.cs" />
+    <Compile Include="Model\Helper.cs" />
+    <Compile Include="Model\INotifyElementViewChanged.cs" />
+    <Compile Include="Model\IOnStationChanged.cs" />
+    <Compile Include="Model\LayerType.cs" />
+    <Compile Include="Model\LineStyleDescriptor.cs" />
+    <Compile Include="Model\RangeValuePair.cs" />
+    <Compile Include="Model\SeriesManager.cs" />
+    <Compile Include="Model\Styles\eLineStyle.cs" />
+    <Compile Include="Model\Styles\eMarkerStyle.cs" />
+    <Compile Include="Model\Styles\eRenderType.cs" />
+    <Compile Include="Model\Styles\eThemeMode.cs" />
+    <Compile Include="Model\Styles\ISeriesStyle.cs" />
+    <Compile Include="Model\Styles\ILineSeriesStyle.cs" />
+    <Compile Include="Model\Styles\PointLineStyle.cs" />
+    <Compile Include="Model\ThemeElementConfigurations.cs" />
+    <Compile Include="Model\Themes\ColorTheme.cs" />
+    <Compile Include="Model\Themes\ITheme.cs" />
+    <Compile Include="Model\TimeSeries\Collection.cs" />
+    <Compile Include="Model\TimeSeries\DataDescriptor.cs" />
+    <Compile Include="Model\TimeSeries\DataDescriptorCollection.cs" />
+    <Compile Include="Model\TimeSeries\FigureType.cs" />
+    <Compile Include="Model\TimeSeries\ICollection.cs" />
+    <Compile Include="Model\Times\eInterval.cs" />
+    <Compile Include="Model\Times\IntervalParameter.cs" />
+    <Compile Include="Model\Times\IntervalParameterCollection.cs" />
+    <Compile Include="Model\Times\TimeCollection.cs" />
+    <Compile Include="Model\Times\TimeDataManager.cs" />
+    <Compile Include="Model\Times\TimeLine.cs" />
+    <Compile Include="Model\Times\TimeLinesCollection.cs" />
+    <Compile Include="Model\Times\TimeModel.cs" />
+    <Compile Include="Model\Times\TimeOperator.cs" />
+    <Compile Include="Model\Times\TimeSeriesHandler.cs" />
+    <Compile Include="Model\ValuePair.cs" />
+    <Compile Include="Model\ViewChangedEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ColorScheduler.cs" />
+    <Compile Include="Service\FontsManager.cs" />
+    <Compile Include="Service\IDGenerator.cs" />
+    <Compile Include="Service\ISeriesServiceLocator.cs" />
+    <Compile Include="Service\LineTypeDescriptor.cs" />
+    <Compile Include="Service\SeriesServiceProvider.cs" />
+    <Compile Include="Service\ThemeMappingServcie.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
